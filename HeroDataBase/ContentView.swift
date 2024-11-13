@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            InfoView()
+            InfoView(titleOn: titleOn)
                 .tabItem {
                     Label("Info", systemImage: "book")
                 }
