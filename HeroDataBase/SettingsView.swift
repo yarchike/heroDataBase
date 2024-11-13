@@ -9,12 +9,16 @@ import Foundation
 import SwiftUI
 
 struct SettingsView: View {
+    @Environment(\.colorScheme) var colorScheme
     @State private var notificationsEnabled = true
     @State private var selectedOption = "Option 1"
     @State private var sliderValue: Double = 50
 
     var body: some View {
         Form {
+            Section(header: Text("Appearance")) {
+                            Text(colorScheme == .light ? "Light Theme enabled" : "Dark Theme enabled")
+                        }
             Section(header: Text("General")) {
                 Toggle("Enable Notifications", isOn: $notificationsEnabled)
                 Picker("Select an option", selection: $selectedOption) {
