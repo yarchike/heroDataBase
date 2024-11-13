@@ -11,6 +11,8 @@ import SwiftUI
 
 
 struct InfoView: View {
+    var titleOn: Bool
+    
     var body: some View {
         NavigationView {
             List(postsData) { post in
@@ -18,12 +20,12 @@ struct InfoView: View {
                     InfoRow(post: post)
                 }
             }
-            .navigationTitle("Hero Base")
+            .navigationTitle(titleOn ? "Hero Base" : "")
         }
     }
 }
 
 
 #Preview {
-    InfoView()
+    InfoView(titleOn: false)
 }
