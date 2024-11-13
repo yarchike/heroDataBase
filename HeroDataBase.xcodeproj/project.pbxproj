@@ -11,6 +11,13 @@
 		BF03820B2CE3499F00E760AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03820A2CE3499F00E760AD /* ContentView.swift */; };
 		BF03820D2CE349A200E760AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF03820C2CE349A200E760AD /* Assets.xcassets */; };
 		BF0382102CE349A200E760AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF03820F2CE349A200E760AD /* Preview Assets.xcassets */; };
+		BF0382172CE34BCC00E760AD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0382162CE34BCC00E760AD /* Post.swift */; };
+		BF0382192CE34C0E00E760AD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0382182CE34C0E00E760AD /* DataModel.swift */; };
+		BF03821B2CE34C4600E760AD /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03821A2CE34C4600E760AD /* InfoView.swift */; };
+		BF03821D2CE34C9400E760AD /* InfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03821C2CE34C9400E760AD /* InfoRow.swift */; };
+		BF03821F2CE34CBF00E760AD /* InfoDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03821E2CE34CBF00E760AD /* InfoDetails.swift */; };
+		BF0382212CE3539500E760AD /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0382202CE3539500E760AD /* HelloView.swift */; };
+		BF0382232CE353DB00E760AD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0382222CE353DB00E760AD /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		BF03820A2CE3499F00E760AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BF03820C2CE349A200E760AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF03820F2CE349A200E760AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BF0382162CE34BCC00E760AD /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		BF0382182CE34C0E00E760AD /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		BF03821A2CE34C4600E760AD /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		BF03821C2CE34C9400E760AD /* InfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRow.swift; sourceTree = "<group>"; };
+		BF03821E2CE34CBF00E760AD /* InfoDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDetails.swift; sourceTree = "<group>"; };
+		BF0382202CE3539500E760AD /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
+		BF0382222CE353DB00E760AD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +69,13 @@
 				BF03820A2CE3499F00E760AD /* ContentView.swift */,
 				BF03820C2CE349A200E760AD /* Assets.xcassets */,
 				BF03820E2CE349A200E760AD /* Preview Content */,
+				BF0382162CE34BCC00E760AD /* Post.swift */,
+				BF0382182CE34C0E00E760AD /* DataModel.swift */,
+				BF03821A2CE34C4600E760AD /* InfoView.swift */,
+				BF03821C2CE34C9400E760AD /* InfoRow.swift */,
+				BF03821E2CE34CBF00E760AD /* InfoDetails.swift */,
+				BF0382202CE3539500E760AD /* HelloView.swift */,
+				BF0382222CE353DB00E760AD /* SettingsView.swift */,
 			);
 			path = HeroDataBase;
 			sourceTree = "<group>";
@@ -137,7 +158,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF0382172CE34BCC00E760AD /* Post.swift in Sources */,
+				BF0382212CE3539500E760AD /* HelloView.swift in Sources */,
+				BF0382192CE34C0E00E760AD /* DataModel.swift in Sources */,
+				BF0382232CE353DB00E760AD /* SettingsView.swift in Sources */,
+				BF03821D2CE34C9400E760AD /* InfoRow.swift in Sources */,
 				BF03820B2CE3499F00E760AD /* ContentView.swift in Sources */,
+				BF03821B2CE34C4600E760AD /* InfoView.swift in Sources */,
+				BF03821F2CE34CBF00E760AD /* InfoDetails.swift in Sources */,
 				BF0382092CE3499F00E760AD /* HeroDataBaseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

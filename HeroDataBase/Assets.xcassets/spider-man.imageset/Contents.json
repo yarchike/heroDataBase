@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "620-spider-man.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
