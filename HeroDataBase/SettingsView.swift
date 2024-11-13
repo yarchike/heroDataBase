@@ -10,10 +10,13 @@ import SwiftUI
 
 struct SettingsView: View {
     @Binding var titleOn: Bool
+    @Binding var rowHeight: Double
     @Environment(\.colorScheme) var colorScheme
     @State private var notificationsEnabled = true
     @State private var selectedOption = "Option 1"
     @State private var sliderValue: Double = 50
+    @State private var isChanging = false
+    
     
     var body: some View {
         Form {
@@ -44,11 +47,31 @@ struct SettingsView: View {
                     Text("Navigation title enabled")
                 }
             }
+            Section(header: Text("Row Height")) {
+                  Slider(
+                      value: $rowHeight,
+                      in: 40...120, // Диапазон для высоты строки
+                      step: 1,
+                      onEditingChanged: { editing in
+                          isChanging = editing
+                      }
+                  )
+                  Text("Row height: \(Int(rowHeight))")
+
+                  // Отображаем InfoRow для визуального контроля высоты
+                  if isChanging {
+                      InfoRow(post: postsData.first!, rowHeight: CGFloat(rowHeight)) // Преобразуем в CGFloat
+                          .frame(height: CGFloat(rowHeight)) // Преобразуем в CGFloat
+                          .padding(.vertical)
+                  }
+              }
+            
+            
         }
         .navigationTitle("Settings")
     }
 }
 
 #Preview {
-    SettingsView(titleOn: .constant(true))
+    SettingsView(titleOn: .constant(true), rowHeight: .constant(60))
 }

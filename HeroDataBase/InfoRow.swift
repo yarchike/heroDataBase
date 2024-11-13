@@ -10,6 +10,7 @@ import SwiftUI
 
 struct InfoRow: View {
     let post: Post
+    var rowHeight: CGFloat
 
     var body: some View {
         HStack {
@@ -21,5 +22,6 @@ struct InfoRow: View {
                 .font(.headline)
         }
         .padding(.vertical, 4)
+        .frame(height: rowHeight)
     }
 }
