@@ -11,19 +11,22 @@ import SwiftUI
 
 
 struct InfoView: View {
+    var titleOn: Bool
+    var rowHeight: CGFloat
+    
     var body: some View {
         NavigationView {
             List(postsData) { post in
                 NavigationLink(destination: InfoDetails(post: post)) {
-                    InfoRow(post: post)
+                    InfoRow(post: post, rowHeight: rowHeight)
                 }
             }
-            .navigationTitle("Hero Base")
+            .navigationTitle(titleOn ? "Hero Base" : "")
         }
     }
 }
 
 
 #Preview {
-    InfoView()
+    InfoView(titleOn: false, rowHeight: 60)
 }
