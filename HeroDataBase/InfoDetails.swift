@@ -11,6 +11,8 @@ import SwiftUI
 
 struct InfoDetails: View {
     let post: Post
+    @State private var imageLoaded = false
+    @State private var isFavorite = false
 
     var body: some View {
         ScrollView {
@@ -20,6 +22,12 @@ struct InfoDetails: View {
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .opacity(imageLoaded ? 1 : 0)
+                    .onAppear {
+                        withAnimation(.easeIn(duration: 0.5)) {
+                            imageLoaded = true
+                        }
+                    }
 
                 Text(post.name)
                     .font(.largeTitle)
@@ -29,6 +37,17 @@ struct InfoDetails: View {
                     .font(.body)
                     .foregroundColor(.secondary)
 
+                Button(action: {
+                    isFavorite.toggle()
+                }) {
+                    HStack {
+                        Image(systemName: isFavorite ? "star.fill" : "star")
+                            .foregroundColor(isFavorite ? .yellow : .gray)
+                        Text(isFavorite ? "В избранном" : "Добавить в избранное")
+                    }
+                }
+                .padding(.top)
+
                 Spacer()
             }
             .padding()
@@ -37,3 +56,4 @@ struct InfoDetails: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 }
+
